@@ -6,7 +6,11 @@
 	"action": {
 		"default_popup": "index.html"
 	},
-	"permissions": ["activeTab", "scripting", "storage"],
+	"permissions": ["activeTab", "scripting", "storage", "webNavigation", "tabs"],
+	"host_permissions": ["*://*.youtube.com/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],

@@ -27,6 +27,12 @@ const run = async () => {
       minify: true,
       outfile: "dist/contentScript.js",
     });
+    await build({
+      entryPoints: ["src/background/index.ts"],
+      bundle: true,
+      minify: true,
+      outfile: "dist/background.js",
+    });
   } catch (e) {
     console.error(e);
   }
